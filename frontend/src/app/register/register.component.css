@@ -1,0 +1,97 @@
+/* Center the container vertically and horizontally */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.login-form {
+    border: 1px solid lightgray;
+    padding: 20px;
+    text-align: center;
+    width: 800px; 
+    max-width: 500%; 
+    box-sizing: border-box;
+    margin-left: 5px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 23px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.form-label {
+    display: block; 
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid lightgray;
+}
+
+.login-button {
+    background-color: white;
+    border: 1px solid #05386b;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 22px;
+    margin-top: 5PX;
+    
+}
+
+.login-button:hover {
+    background-color: #05386b;
+    color: white;
+}
+
+.sign-up-link {
+    text-align: left;
+    margin-top: 20px; 
+    font-size:20px ;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.sign-up-link a {
+    color: #05386b; 
+    text-decoration: none;
+}
+
+.sign-up-link a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 7px solid #42A948; 
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 7px solid #a94442; 
+  }
+
+  .login-button[disabled] {
+    pointer-events: none;
+}
+
+.alert{
+    margin-top: 4px;
+    padding: 5px;
+}

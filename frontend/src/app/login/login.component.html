@@ -1,0 +1,27 @@
+<div class="center-container">
+    <form class="login-form" #loginform="ngForm" (ngSubmit)="loginUser(loginform.value)">
+        <div class="form" *ngIf="msg" [class.alert]="true" [class.alert]="true" [class.alert-danger]="true">{{msg}}</div>
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" ngModel required #email="ngModel" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+        </div>
+        <div class="form">
+            <div *ngIf="email.invalid && email.touched" [class.alert]="true" [class.alert-danger]="true">
+                Please enter a valid email address
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" ngModel required minlength="6" #password="ngModel">
+        </div>
+        <div class="form">
+            <div *ngIf="password.invalid && password.touched" [class.alert]="true" [class.alert-danger]="true">
+                Password must be at least 6 characters long
+            </div>
+        </div>
+        <div class="submit-button-container form-group">
+            <input type="submit" class="login-button" value="Login" [disabled]="loginform.form.invalid">
+        </div>
+        <p class="sign-up-link">Don't have an account? <a (click)="noAccount()">Sign Up</a></p>
+    </form>
+</div>

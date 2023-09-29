@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leave Counts</title>
+    <style>
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Leave Counts</h1>
+    <table>
+        <tr>
+            <th>Leave Type</th>
+            <th>Count</th>
+        </tr>
+        <tr>
+            <td>Accepted Leave</td>
+            <td><span id="acceptedLeaveCount">{{AcceptedleaveCount}}</span></td>
+        </tr>
+        <tr>
+            <td>Rejected Leave</td>
+            <td><span id="rejectedLeaveCount">{{RejectedleaveCount}}</span></td>
+        </tr>
+        <tr>
+            <td>Pending Leave</td>
+            <td><span id="pendingLeaveCount">{{PendingleaveCount}}</span></td>
+        </tr>
+        <tr>
+            <td>Total Leave</td>
+            <td><span id="totalLeaveCount">{{ActualleaveCount}}</span></td>
+        </tr>
+        <tr>
+            <td>Remaining Leave</td>
+            <td><span id="aLeaveCount">{{leaveCount}}</span></td>
+        </tr>
+    </table>
+</body>
+</html>

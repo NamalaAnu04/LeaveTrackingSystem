@@ -1,0 +1,23 @@
+.main-nav {
+    height: 135px;
+    background-color: #05386b !important;
+    display: block;
+  }
+  .title {
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 3.8em;
+    padding-left: 50px;
+  }
+  .text-center {
+    text-align: center !important;
+  }
+
+  .navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }  

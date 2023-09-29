@@ -1,0 +1,40 @@
+<app-manager-header></app-manager-header>
+<div class="container">
+  <h2>New Leave Requests</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Leave Type</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of leaves">
+        <td>{{ leave.leave_type }}</td>
+        <td>{{ leave.start_date }}</td>
+        <td>{{ leave.end_date }}</td>
+        <td>{{ leave.status }}</td>
+        <td>
+            <button class="btn" (click)="AcceptLeave(leave.leave_id);getleave()">Accept</button>
+            <button class="button btn" (click)="RejectLeave(leave.leave_id)">Reject</button>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="popup" *ngIf="show">
+    <div class="content">
+    <label for="comment" class="form-label">Reason for Rejection</label>
+    <textarea type="text" id="comment" class="form-control" rows="4" [(ngModel)]="comment"></textarea><br>
+    <div class="btn-container">
+    <button class="btn buton" (click)="updateComment()">Submit</button>
+    <button class="btn" (click)="close()" >Close</button>
+</div>
+</div>
+</div>
+
+

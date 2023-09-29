@@ -1,0 +1,18 @@
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<nav class="navbar">
+    <button class="butn" [ngClass]="{'white-text': isButtonWhiteText}" (click)="toggleButtonTextColor();toggleButtons()"><b>LTS</b></button>
+    <button class="btn" (click)="showLogOut()"><i class='far fa-user-circle user-icon'></i> {{loginObj.fname}} {{loginObj.lname}}  &nbsp;<i class="fas fa-caret-down"></i></button>
+  </nav>
+  <div class="button-group" *ngIf="showButtons">
+    <button class="leave-button" [ngClass]="{'black': isNewLeaveBlack}" (click)="toggleNewLeaveColor();newLeave()" >New Leave Requests</button>
+    <button class="leave-button" [ngClass]="{'black': isLeaveOverviewBlack}" (click)="toggleLeaveoverviewColor();overview()">Leave Overview</button>
+    <button class="leave-button" [ngClass]="{'black': isSettingsBlack}" (click)="toggleSettingsColor();settings()">Settings</button>
+  </div>
+
+  <div *ngIf="showLogout" class="logout">
+    <button class="lbtn" (click)="logout()">Logout <i class="fas fa-sign-out-alt"></i></button>
+  </div>
+
+  

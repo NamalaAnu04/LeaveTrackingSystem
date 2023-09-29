@@ -1,0 +1,10 @@
+<app-manager-header></app-manager-header>
+<div class="container">
+  <div class="card">
+    <form #leavecount="ngForm">
+      <h2>Increment Leave Count</h2>
+      <input type="number" [(ngModel)]="incrementValue" placeholder="Enter increment value" name="incrementLeave">
+      <button (click)="incrementLeave()">Increment Leave</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,99 @@
+<app-employee-header></app-employee-header>
+<div class="center-container">
+  <form class="applyleave" #applyleave="ngForm" (ngSubmit)="ApplyLeave(applyleave.value)">
+    <div [class.alert]="true"
+    [class.alert-danger]="true" *ngIf="errormsg">{{errormsg}}</div>
+    <div class="form-group">
+      <label for="leaveType" class="form-label">Leave Type</label>
+      <select
+        class="form-control"
+        id="leaveType"
+        name="leave_type"
+        ngModel
+        required
+        #leaveType="ngModel"
+      >
+        <option value="casualLeave">Casual Leave</option>
+        <option value="sickLeave">Sick Leave</option>
+        <option value="vacation">Vacation</option>
+        <option value="PersonalLeave">Personal Leave</option>
+      </select>
+      <div
+        *ngIf="leaveType.invalid && leaveType.touched"
+        [class.alert]="true"
+        [class.alert-danger]="true"
+      >
+        Leave Type is Required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="start_date">Start Date</label>
+      <input
+      class="form-control"
+        type="date"
+        id="start_date"
+        name="start_date"
+        ngModel
+        #start_date="ngModel"
+        appDateBeforeCurrent
+        required
+        [appStartDateBeforeEndDate]="'end_date'"
+      >
+      <div *ngIf="start_date.touched && start_date.errors?.['required']" [class.alert]="true"
+      [class.alert-danger]="true">
+        Start Date is Required
+      </div>
+      <div *ngIf="start_date.errors?.['dateBeforeCurrent']" [class.alert]="true"
+      [class.alert-danger]="true">
+        Start Date must be After the current date
+      </div>
+      <div *ngIf="start_date.hasError('startDateBeforeEndDate')" [class.alert]="true"
+      [class.alert-danger]="true">
+        Start Date must be before End Date
+      </div>
+    </div>
+      
+    <div class="form-group">
+      <label for="end_date">End Date</label>
+      <input
+      class="form-control"
+        type="date"
+        id="end_date"
+        name="end_date"
+        ngModel
+        #end_date="ngModel"
+        appDateBeforeCurrent
+        required
+        [appEndDateAfterStartDate]="'start_date'"
+      >
+      <div *ngIf="end_date.touched && end_date.errors?.['required']" [class.alert]="true"
+      [class.alert-danger]="true">
+        End Date is Required
+      </div>
+      <div *ngIf="end_date.errors?.['dateBeforeCurrent']" [class.alert]="true"
+      [class.alert-danger]="true">
+        End Date must be After the current date
+      </div>
+      <div *ngIf="end_date.hasError('endDateAfterStartDate')" [class.alert]="true"
+      [class.alert-danger]="true">
+        End Date must be after Start Date
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="reason" class="form-label">Reason</label>
+      <textarea class="form-control" id="reason" name="reason" ngModel required #reason="ngModel" rows="4"></textarea>
+      <div *ngIf="reason.invalid && reason.touched" [class.alert]="true" [class.alert-danger]="true">
+          Reason is Required
+      </div>
+  </div>
+
+    <div class="submit-button-container form-group">
+      <input
+        type="submit"
+        class="submit-button"
+        value="Apply Leave"
+        [disabled]="applyleave.form.invalid"
+      />
+    </div>
+  </form>
+</div>

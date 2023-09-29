@@ -1,0 +1,71 @@
+.navbar{
+    background-color:#05386b ;
+    padding: 0;
+    padding-left: 200px;
+    padding-top: 0;
+    width: 100%;
+}
+.butn{
+    background-color: #05386b;
+    color: white;
+    font-size: 20px;
+    width: 55px;
+    border: none;
+    padding-bottom: 6px;
+    padding-top: 3px;
+}
+.btn{
+  background-color: #05386b;
+  color:white;
+  font-size: 18px;
+  margin-right: 300px;
+  border: none;
+}
+
+.white-text {
+    color: #05386b;
+    background-color: white;
+  }
+
+  .button-group{
+    background-color: rgb(248, 243, 243);
+    margin-left: 200px;
+    margin-right: 220px;
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+  .leave-button{
+    background-color:rgb(248, 243, 243) ;
+    border: none;
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .black{
+    color:rgb(248, 243, 243);
+    background-color: rgb(31, 31, 31);
+  }
+  /* Style for the user dropdown button */
+.user-dropdown {
+  position: relative;
+  display: inline-block;
+}
+.btn:hover {
+  background-color: #05386b;
+  color: black;
+}
+.logout{
+  margin-left:1450px;
+  
+}
+.lbtn{
+  margin-top: 2px;
+  padding: 10px;
+  border: solid 0.1px gray;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 40%;
+  height: 15%;
+}

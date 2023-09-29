@@ -1,0 +1,25 @@
+<app-manager-header></app-manager-header>
+<div class="container">
+  <h2>Leave Overview</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Leave Type</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of filteredLeaves">
+        <td>{{ leave.leave_type }}</td>
+        <td>{{ leave.start_date }}</td>
+        <td>{{ leave.end_date }}</td>
+        <td>{{ leave.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+

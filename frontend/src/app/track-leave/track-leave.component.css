@@ -1,0 +1,91 @@
+.btn {
+    background-color: rgb(255, 255, 255);
+    color: #05386b;
+    padding: 10px; /* Increased padding */
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    border: 2px solid #05386b; /* Added 'solid' for border style */
+    display: inline-block; /* Changed to inline-block to allow margin */
+    margin-right: 10px; /* Added margin to create a small gap */
+    transition: background-color 0.3s, color 0.3s; /* Added a transition effect */
+    border-radius: 0;
+  }
+  
+  .buton {
+    color: rgb(216, 38, 38);
+    padding: 10px; /* Increased padding */
+    font-size: 18px; /* Increased font size */
+    border: 2px solid rgb(216, 38, 38); /* Added 'solid' for border style */
+    display: inline-block; /* Changed to inline-block to allow margin */
+    transition: background-color 0.3s, color 0.3s; /* Added a transition effect */
+  }
+  
+  /* Center the icon vertically and horizontally */
+  .btn i,
+  .buton i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .btn:hover{
+    background-color: #05386b;
+    color: white;
+  }
+  .buton:hover {
+    background-color: rgb(216, 38, 38);
+    color: white;
+  }
+  
+  .btn i,
+  .buton i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  .container {
+    width: 55%;
+    padding: 10px;
+    text-align: center; 
+    margin-left: 10%;
+    padding-right: 2.5%;
+    padding-top: 2%;
+  }
+  
+  .table {
+    width: 150%; 
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #fff;
+    font-size: 23px;
+  }
+  
+  .table th,
+  .table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  
+  }
+  
+  .table th {
+  background-color: #05386b;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  }
+  
+  .table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+  }
+  
+  .table tbody tr:hover {
+  background-color: #e0e0e0;
+  }

@@ -1,0 +1,39 @@
+<app-employee-header></app-employee-header>
+<head>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+<div class="container">
+  <h2>Leaves Details</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Leave Type</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of leaves">
+        <td>{{ leave.leave_type }}</td>
+        <td>{{ leave.start_date }}</td>
+        <td>{{ leave.end_date }}</td>
+        <td>{{ leave.status }}</td>
+        <td *ngIf="leave.status === 'pending'">
+          <button class="btn" (click)="editLeave(leave.leave_id)"><i class="fa fa-edit"></i></button>
+          <button class="buton btn" (click)="deleteLeave(leave.leave_id)"><i class="fa fa-trash"></i></button>
+        </td>
+        <td *ngIf="leave.status === 'Accepted'">
+          <p>No Action</p>
+        </td>
+        <td *ngIf="leave.status === 'Rejected'">
+          <p>No Action</p>
+        </td>
+        <td>{{leave.comment}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
