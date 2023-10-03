@@ -32,42 +32,20 @@ public class ManagerControllerTest {
 
     @Test
     public void testGetLeavesByStatus() {
-        // Define a sample status
         String status = "approved";
-
-        // Create a sample list of Leave objects with the specified status
         List<Leave> sampleLeaves = new ArrayList<>();
-        // Add some Leave objects to the list with the specified status
-
-        // Mock the service method to return the sample list of Leave objects
         when(leaveService.getLeavesByStatus(status)).thenReturn(sampleLeaves);
-
-        // Call the controller method
         List<Leave> result = leaveController.getLeavesByStatus(status);
-
-        // Verify that the service method was called
         verify(leaveService, times(1)).getLeavesByStatus(status);
-
-        // Assert the result
         assertEquals(sampleLeaves, result);
     }
     
     @Test
     public void testGetLeaves() {
-        // Create a sample list of Leave objects
         List<Leave> sampleLeaves = new ArrayList<>();
-        // Add some Leave objects to the list
-
-        // Mock the service method to return the sample list of Leave objects
         when(leaveService.getLeaves()).thenReturn(sampleLeaves);
-
-        // Call the controller method
         List<Leave> result = leaveController.getLeaves();
-
-        // Verify that the service method was called
         verify(leaveService, times(1)).getLeaves();
-
-        // Assert the result
         assertEquals(sampleLeaves, result);
     }
 
